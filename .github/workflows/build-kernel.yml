@@ -31,7 +31,7 @@ jobs:
 
       - name: Pull modules source
         run: |
-          git clone --depth=1 ${{ env.MODULES_SOURCE }} -b ${{ env.MODULES_SOURCE_BRANCH }} vendor/mediatek/kernel_modules
+          git clone --depth=1 -b android-14 https://github.com/penangf-fogorow/vendor_mediatek_kernel_modules.git vendor/mediatek/kernel_modules
 
       - name: Build kernel
         run: |
