@@ -29,6 +29,10 @@ jobs:
         run: |
           git clone --depth=1 ${{ env.KERNEL_SOURCE }} -b ${{ env.KERNEL_SOURCE_BRANCH }} kernel-source
 
+      - name: Pull modules source
+        run: |
+          git clone --depth=1 ${{ env.MODULES_SOURCE }} -b ${{ env.MODULES_SOURCE_BRANCH }} vendor/mediatek/kernel_modules
+
       - name: Build kernel
         run: |
           export KBUILD_BUILD_USER="zclkkk"
